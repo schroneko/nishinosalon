@@ -35,8 +35,8 @@ export default function Home({
             >
               <Link href={`/posts/${id}`}>
                 <a>
-                  {Number(id.substr(0, 4))}/{Number(id.substr(5, 2))}/
-                  {Number(id.substr(8, 2))}
+                  {Number(id.substr(0, 4))}年{Number(id.substr(5, 2))}月
+                  {Number(id.substr(8, 2))}日
                 </a>
               </Link>
               <br />
