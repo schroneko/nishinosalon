@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/client";
+import React from "react";
 
 const name = "西野亮廣エンタメ研究所";
 export const siteTitle = "西野さんの過去記事";
@@ -14,6 +16,8 @@ export default function Layout({
   children: React.ReactNode;
   home?: boolean;
 }) {
+  const [session, loading] = useSession();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -66,7 +70,23 @@ export default function Layout({
           </>
         )}
       </header>
-      <main style={{ whiteSpace: "pre-wrap" }}>{children}</main>
+      {!session && (
+        <React.Fragment>
+          <div style={{ textAlign: "center" }}>
+            Not signed in <br />
+            <button onClick={signIn}>Sign in</button>
+          </div>
+        </React.Fragment>
+      )}
+      {session && (
+        <React.Fragment>
+          <div style={{ textAlign: "center" }}>
+            Signed in as {session.user.email} <br />
+            <button onClick={signOut}>Sign out</button>
+          </div>
+          <main style={{ whiteSpace: "pre-wrap" }}>{children}</main>
+        </React.Fragment>
+      )}
       {!home && (
         <div className={styles.backToHome}>
           <Link href="https://salon.jp/nishino">

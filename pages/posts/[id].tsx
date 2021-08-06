@@ -24,7 +24,7 @@ export default function Post({
       <article>
         <h1 className={utilStyles.headingXl}>
           {Number(postData.id.substr(0, 4))}年{Number(postData.id.substr(5, 2))}
-          月{Number(postData.id.substr(8, 2))}日の記事
+          月{Number(postData.id.substr(8, 2))}日記事
         </h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.id} />
