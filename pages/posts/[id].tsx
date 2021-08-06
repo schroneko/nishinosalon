@@ -9,8 +9,6 @@ export default function Post({
   postData,
 }: {
   postData: {
-    // title: string;
-    // date: string;
     id: string;
     contentHtml: string;
   };
@@ -18,13 +16,12 @@ export default function Post({
   return (
     <Layout>
       <Head>
-        {/* <title>{postData.title}</title> */}
         <title>{postData.id}</title>
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>
           {Number(postData.id.substr(0, 4))}年{Number(postData.id.substr(5, 2))}
-          月{Number(postData.id.substr(8, 2))}日記事
+          月{Number(postData.id.substr(8, 2))}日
         </h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.id} />
