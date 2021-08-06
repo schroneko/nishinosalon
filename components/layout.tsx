@@ -81,12 +81,7 @@ export default function Layout({
         {!home && (
           <div className={styles.backToHome}>
             <Link href="https://salon.jp/nishino">
-              <a
-                className={utilStyles.headingLg}
-                style={{ textAlign: "center" }}
-              >
-                サロンの入会はこちらから
-              </a>
+              <a>サロンの入会はこちらから</a>
             </Link>
             <br />
             <br />
