@@ -18,6 +18,7 @@ export default function Layout({
   home?: boolean;
 }) {
   const [session, loading] = useSession();
+
   return (
     <>
       <Header />
