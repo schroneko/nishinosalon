@@ -74,7 +74,7 @@ export default function Layout({
         <React.Fragment>
           <div style={{ textAlign: "center" }}>
             Not signed in <br />
-            <button onClick={signIn}>Sign in</button>
+            <button onClick={() => signIn()}>Sign in</button>
           </div>
         </React.Fragment>
       )}
@@ -82,7 +82,7 @@ export default function Layout({
         <React.Fragment>
           <div style={{ textAlign: "center" }}>
             Signed in as {session.user.email} <br />
-            <button onClick={signOut}>Sign out</button>
+            <button onClick={() => signOut()}>Sign out</button>
           </div>
           <main style={{ whiteSpace: "pre-wrap" }}>{children}</main>
         </React.Fragment>
