@@ -1,18 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
+const name = "西野亮廣エンタメ研究所";
+export const siteTitle = "西野さんの過去記事";
 
 export default function Layout({
   children,
-  home
+  home,
 }: {
-  children: React.ReactNode
-  home?: boolean
+  children: React.ReactNode;
+  home?: boolean;
 }) {
   return (
     <div className={styles.container}>
@@ -20,7 +20,7 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Nishino Akihiro's Online Salon Archives"
         />
         <meta
           property="og:image"
@@ -42,7 +42,7 @@ export default function Layout({
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.headingLg}>{name}</h1>
           </>
         ) : (
           <>
@@ -66,14 +66,21 @@ export default function Layout({
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main style={{ whiteSpace: "pre-wrap" }}>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
+          <Link href="https://salon.jp/nishino">
+            <a className={utilStyles.headingLg} style={{ textAlign: "center" }}>
+              サロンの入会はこちらから
+            </a>
+          </Link>
+          <br />
+          <br />
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
       )}
     </div>
-  )
+  );
 }
