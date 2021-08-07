@@ -73,11 +73,11 @@ export default function Layout({
             </>
           )}
         </header>
-        {session && (
-          <main style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}>
-            {children}
-          </main>
-        )}
+        {/* {session && ( */}
+        <main style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}>
+          {children}
+        </main>
+        {/* )} */}
         {!home && (
           <div className={styles.backToHome}>
             <Link href="https://salon.jp/nishino">
