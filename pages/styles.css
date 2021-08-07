@@ -7,6 +7,9 @@ body {
   margin: 0 auto;
   background: #fff;
   color: #333;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height: 100%;
 }
 
 li,

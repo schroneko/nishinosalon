@@ -11,10 +11,10 @@
   top: 0;
   opacity: 1;
   overflow: hidden;
-  border-radius: 0 0 .6rem .6rem;
-  padding: .6rem 1rem;
+  border-radius: 0 0 0.6rem 0.6rem;
+  padding: 0.6rem 1rem;
   margin: 0;
-  background-color: rgba(0,0,0,.05);
+  background-color: rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease-in;
 }
 
@@ -26,13 +26,13 @@
 .signedInText,
 .notSignedInText {
   position: absolute;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
   left: 1rem;
   right: 6.5rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  display: inherit;  
+  display: inherit;
   z-index: 1;
   line-height: 1.3rem;
 }
@@ -53,31 +53,41 @@
 }
 
 .button,
-.buttonPrimary {
+.buttonInverse {
   float: right;
-  margin-right: -.4rem;
-  font-weight: 500;
-  border-radius: .3rem;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1.4rem;
-  padding: .7rem .8rem;
+  margin-right: -0.4rem;
   position: relative;
   z-index: 10;
   background-color: transparent;
-  color: #555;
+  margin: 10px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  color: #6772e5;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  transition: all 0.15s ease;
+  cursor: pointer;
 }
 
-.buttonPrimary {
-  background-color: #346df1;
-  border-color: #346df1;
+.button:hover,
+.buttonInverse:hover {
+  color: #7795f8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+.buttonInverse {
   color: #fff;
-  text-decoration: none;
-  padding: .7rem 1.4rem;
+  background: #6772e5;
 }
-
-.buttonPrimary:hover {
-  box-shadow: inset 0 0 5rem rgba(0,0,0,0.2)
+.buttonInverse:hover {
+  color: #fff;
+  background-color: #7795f8;
 }
 
 .navItems {
