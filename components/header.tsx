@@ -16,23 +16,23 @@ export default function Header() {
             !session && loading ? styles.loading : styles.loaded
           }`}
         >
-          {/* {!session && (
+          {!session && (
             <>
-              <span className={styles.notSignedInText}>
+              {/* <span className={styles.notSignedInText}>
                 You are not signed in
-              </span>
+              </span> */}
               <a
                 href={`/api/auth/signin`}
-                className={styles.buttonInverse}
+                // className={styles.buttonInverse}
                 onClick={(e) => {
                   e.preventDefault();
                   signIn("credentials");
                 }}
               >
-                Sign in
+                .
               </a>
             </>
-          )} */}
+          )}
           {session && (
             <>
               {session.user.image && (
