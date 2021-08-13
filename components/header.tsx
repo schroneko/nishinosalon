@@ -27,7 +27,6 @@ export default function Header() {
                 style={{
                   textDecoration: "none",
                   color: "black",
-                  fontSize: "20%",
                 }}
                 onClick={(e) => {
                   e.preventDefault();
