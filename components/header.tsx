@@ -12,9 +12,9 @@ export default function Header() {
       </noscript>
       <div className={styles.signedInStatus}>
         <p
-          className={`nojs-show ${
-            !session && loading ? styles.loading : styles.loaded
-          }`}
+        // className={`nojs-show ${
+        //   !session && loading ? styles.loading : styles.loaded
+        // }`}
         >
           {!session && (
             <>
@@ -24,6 +24,11 @@ export default function Header() {
               <a
                 href={`/api/auth/signin`}
                 // className={styles.buttonInverse}
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontSize: "20%",
+                }}
                 onClick={(e) => {
                   e.preventDefault();
                   signIn("credentials");
