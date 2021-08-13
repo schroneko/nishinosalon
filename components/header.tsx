@@ -16,7 +16,7 @@ export default function Header() {
             !session && loading ? styles.loading : styles.loaded
           }`}
         >
-          {!session && (
+          {/* {!session && (
             <>
               <span className={styles.notSignedInText}>
                 You are not signed in
@@ -32,7 +32,7 @@ export default function Header() {
                 Sign in
               </a>
             </>
-          )}
+          )} */}
           {session && (
             <>
               {session.user.image && (
