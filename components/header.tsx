@@ -30,7 +30,7 @@ export default function Header() {
                 }}
                 onClick={(e) => {
                   e.preventDefault();
-                  signIn("credentials");
+                  signIn("google");
                 }}
               >
                 .
